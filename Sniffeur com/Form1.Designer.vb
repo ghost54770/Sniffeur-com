@@ -33,6 +33,9 @@ Partial Class Form1
         Me.ComboBox_NombreBitsStop = New System.Windows.Forms.ComboBox()
         Me.Label_Parite = New System.Windows.Forms.Label()
         Me.ComboBox_Parite = New System.Windows.Forms.ComboBox()
+        Me.Button_OuvreFermeCOM = New System.Windows.Forms.Button()
+        Me.Button_EnvoieCOM = New System.Windows.Forms.Button()
+        Me.TextBox_EnvoieCOM = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'TextBox_FenetrePrincipale
@@ -45,6 +48,7 @@ Partial Class Form1
         '
         'ComboBox_PortCOM
         '
+        Me.ComboBox_PortCOM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_PortCOM.FormattingEnabled = True
         Me.ComboBox_PortCOM.Location = New System.Drawing.Point(96, 26)
         Me.ComboBox_PortCOM.Name = "ComboBox_PortCOM"
@@ -71,6 +75,7 @@ Partial Class Form1
         '
         'ComboBox_Baud
         '
+        Me.ComboBox_Baud.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_Baud.FormattingEnabled = True
         Me.ComboBox_Baud.Location = New System.Drawing.Point(96, 53)
         Me.ComboBox_Baud.Name = "ComboBox_Baud"
@@ -88,6 +93,7 @@ Partial Class Form1
         '
         'ComboBox_NombreBitsDonnee
         '
+        Me.ComboBox_NombreBitsDonnee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_NombreBitsDonnee.FormattingEnabled = True
         Me.ComboBox_NombreBitsDonnee.Location = New System.Drawing.Point(96, 107)
         Me.ComboBox_NombreBitsDonnee.Name = "ComboBox_NombreBitsDonnee"
@@ -105,6 +111,7 @@ Partial Class Form1
         '
         'ComboBox_NombreBitsStop
         '
+        Me.ComboBox_NombreBitsStop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_NombreBitsStop.FormattingEnabled = True
         Me.ComboBox_NombreBitsStop.Location = New System.Drawing.Point(96, 134)
         Me.ComboBox_NombreBitsStop.Name = "ComboBox_NombreBitsStop"
@@ -116,23 +123,52 @@ Partial Class Form1
         Me.Label_Parite.AutoSize = True
         Me.Label_Parite.Location = New System.Drawing.Point(12, 83)
         Me.Label_Parite.Name = "Label_Parite"
-        Me.Label_Parite.Size = New System.Drawing.Size(78, 13)
+        Me.Label_Parite.Size = New System.Drawing.Size(68, 13)
         Me.Label_Parite.TabIndex = 10
-        Me.Label_Parite.Text = "Bits de donnée"
+        Me.Label_Parite.Text = "Bits de parité"
         '
         'ComboBox_Parite
         '
+        Me.ComboBox_Parite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox_Parite.FormattingEnabled = True
         Me.ComboBox_Parite.Location = New System.Drawing.Point(96, 80)
         Me.ComboBox_Parite.Name = "ComboBox_Parite"
         Me.ComboBox_Parite.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox_Parite.TabIndex = 9
         '
+        'Button_OuvreFermeCOM
+        '
+        Me.Button_OuvreFermeCOM.Location = New System.Drawing.Point(96, 179)
+        Me.Button_OuvreFermeCOM.Name = "Button_OuvreFermeCOM"
+        Me.Button_OuvreFermeCOM.Size = New System.Drawing.Size(121, 33)
+        Me.Button_OuvreFermeCOM.TabIndex = 11
+        Me.Button_OuvreFermeCOM.Text = "Ouvrir"
+        Me.Button_OuvreFermeCOM.UseVisualStyleBackColor = True
+        '
+        'Button_EnvoieCOM
+        '
+        Me.Button_EnvoieCOM.Location = New System.Drawing.Point(217, 268)
+        Me.Button_EnvoieCOM.Name = "Button_EnvoieCOM"
+        Me.Button_EnvoieCOM.Size = New System.Drawing.Size(121, 33)
+        Me.Button_EnvoieCOM.TabIndex = 12
+        Me.Button_EnvoieCOM.Text = "Envoie"
+        Me.Button_EnvoieCOM.UseVisualStyleBackColor = True
+        '
+        'TextBox_EnvoieCOM
+        '
+        Me.TextBox_EnvoieCOM.Location = New System.Drawing.Point(82, 275)
+        Me.TextBox_EnvoieCOM.Name = "TextBox_EnvoieCOM"
+        Me.TextBox_EnvoieCOM.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox_EnvoieCOM.TabIndex = 13
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1191, 500)
+        Me.Controls.Add(Me.TextBox_EnvoieCOM)
+        Me.Controls.Add(Me.Button_EnvoieCOM)
+        Me.Controls.Add(Me.Button_OuvreFermeCOM)
         Me.Controls.Add(Me.Label_Parite)
         Me.Controls.Add(Me.ComboBox_Parite)
         Me.Controls.Add(Me.Label_NombreBitsStop)
@@ -162,4 +198,7 @@ Partial Class Form1
     Friend WithEvents ComboBox_NombreBitsStop As ComboBox
     Friend WithEvents Label_Parite As Label
     Friend WithEvents ComboBox_Parite As ComboBox
+    Friend WithEvents Button_OuvreFermeCOM As Button
+    Friend WithEvents Button_EnvoieCOM As Button
+    Friend WithEvents TextBox_EnvoieCOM As TextBox
 End Class
